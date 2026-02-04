@@ -5,8 +5,8 @@
   font-weight: 600;
   font-display: swap;
   src: local(''),
-       url('/gerhardscoaching/assets/fonts/roboto-serif-v8-latin-600.woff2') format('woff2'),
-       url('/gerhardscoaching/assets/fonts/roboto-serif-v8-latin-600.woff') format('woff');
+       url('../../../public/assets/fonts/roboto-serif-v8-latin-600.woff2') format('woff2'),
+       url('../../../public/assets/fonts/roboto-serif-v8-latin-600.woff') format('woff');
 }
 @font-face {
   font-family: 'Roboto Serif';
@@ -14,8 +14,8 @@
   font-weight: 700;
   font-display: swap;
   src: local(''),
-       url('/gerhardscoaching/assets/fonts/roboto-serif-v8-latin-700.woff2') format('woff2'),
-       url('/gerhardscoaching/assets/fonts/roboto-serif-v8-latin-700.woff') format('woff');
+       url('../../../public/assets/fonts/roboto-serif-v8-latin-700.woff2') format('woff2'),
+       url('../../../public/assets/fonts/roboto-serif-v8-latin-700.woff') format('woff');
 }
 
 /* Body: Plus Jakarta Sans (Variable) */
@@ -24,7 +24,7 @@
   font-style: normal;
   font-weight: 200 800;
   font-display: swap;
-  src: url('/gerhardscoaching/assets/fonts/PlusJakartaSans-Variable.ttf') format('truetype');
+  src: url('../../../public/assets/fonts/PlusJakartaSans-Variable.ttf') format('truetype');
 }
 
 :root {
