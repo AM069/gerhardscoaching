@@ -1,11 +1,7 @@
 {
-	"name": "odyssey-theme",
-	"version": "3.1.0",
-	"private": false,
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:treefarmstudio/odyssey-theme"
-	},
+	"name": "gerhardscoaching",
+	"version": "1.0.0",
+	"private": true,
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
