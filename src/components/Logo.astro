@@ -3,16 +3,21 @@ import { Image } from 'astro:assets';
 import logoImage from '../assets/images/gerhardscoaching-logo.png';
 ---
 
-<Image src={logoImage} alt="Gerhards Coaching Logo" width={240} height={128} class="odyssey-logo" />
+<Image src={logoImage} alt="Gerhards Coaching Logo" width={240} height={128} class="header-logo" />
 
 <style>
-	.odyssey-logo {
+	.header-logo {
 		width: auto;
-    height: 60px; /* Increased from 40px */
+    height: 54px;
 		margin: 0;
     /* Force high-quality rendering and hardware acceleration */
     transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
 	}
+  @media (max-width: 850px) {
+    .header-logo {
+      height: 38px;
+    }
+  }
 </style>

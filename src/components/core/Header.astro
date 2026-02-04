@@ -167,8 +167,15 @@ const { navData, rightMenu } = Astro.props;
     }
   }
   @media(max-width: 850px) {
+    header.header--right {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.5rem 0.75rem;
+    }
     #menuButton {
       display: block;  
+      margin-right: 0.5rem;
     }
     .header-nav__container {
       width: 100%;
