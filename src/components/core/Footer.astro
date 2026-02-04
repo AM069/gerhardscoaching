@@ -16,6 +16,24 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
         <div>
           <slot name="logo" />
         </div>
+        <div class="footer-contact__container">
+          <p>
+            <Icon name="mdi:account" width={20} height={20} />
+            <span>Marco Gerhards</span>
+          </p>
+          <p>
+            <Icon name="mdi:map-marker" width={20} height={20} />
+            <span>Tullastrasse 67, 79108 Freiburg</span>
+          </p>
+          <p>
+            <Icon name="mdi:phone" width={20} height={20} />
+            <a href="tel:+491786931585">0178 6931585</a>
+          </p>
+          <p>
+            <Icon name="mdi:email" width={20} height={20} />
+            <a href="mailto:marco@gerhardscoaching.de">marco@gerhardscoaching.de</a>
+          </p>
+        </div>
         <ul class="footer-socials__list">
           {
             footerSocials.map((social) => (
@@ -51,7 +69,7 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
     </div>
     <div class="footer-copyright__container">
       {showPlug && <Plug/>}
-      <p>Copyright &copy; {new Date().getFullYear()} {copyrightName}</p>
+      <p>&copy; {new Date().getFullYear()} {copyrightName}</p>
     </div>
 
   </Container>
@@ -59,68 +77,103 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
 
 <style>
   footer {
-    --footer-bg: var(--theme-primary);
-    --footer-color: var(--theme-on-primary);
-    min-height: 40vh;
+    --footer-bg: var(--theme-surface-1);
+    --footer-color: var(--theme-on-surface-1);
+    min-height: 30vh;
     background-color: var(--footer-bg);
     color: var(--footer-color);
     border-top-left-radius: var(--theme-shape-radius);
     border-top-right-radius: var(--theme-shape-radius);
+    padding: 4rem 0 2rem 0;
   }
   .footer-grid__container {
-    padding: 10vh 0 1rem 0;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+  }
+  .footer-brand__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .footer-contact__container {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+  }
+  .footer-contact__container p {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0.5rem 0;
+  }
+  .footer-contact__container a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--theme-transition);
+  }
+  .footer-contact__container a:hover {
+    color: var(--theme-primary);
+    text-decoration: underline;
   }
   .footer-socials__list {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     padding: 0;
     display: flex;
     list-style: none;
+    gap: 1rem;
   }
-  .footer-socials__item {
-    margin-right: 0.5rem;
+  .footer-socials__link {
+    color: inherit;
+    opacity: 0.8;
+    transition: opacity var(--theme-transition), color var(--theme-transition);
+  }
+  .footer-socials__link:hover {
+    opacity: 1;
+    color: var(--theme-primary);
   }
   .footer-link__list {
-    margin: 0;
+    margin: 1rem 0 0 0;
     padding: 0;
     list-style: none;
   }
   .footer-link__list li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
   .footer-link__list li a {
     text-decoration: none;
+    color: inherit;
+    font-size: var(--font-size-sm);
+    opacity: 0.8;
+    transition: opacity var(--theme-transition), color var(--theme-transition);
   }
   .footer-link__list li a:hover {
-    opacity: 0.84;
+    opacity: 1;
+    color: var(--theme-primary);
   }
   .footer-copyright__container {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 2rem;
   }
   .footer-copyright__container p {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
+    opacity: 0.7;
   }
   @media (max-width: 768px) {
-    .footer-grid__container :first-child {
-      grid-column: 1/-1;
-    }
     .footer-grid__container {
-      padding: 5vh 0;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .footer-brand__container {
+      grid-column: 1 / -1;
     }
   }
   @media (max-width: 600px) {
     .footer-grid__container {
-      padding: 5vh 0;
       grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-    .footer-copyright__container {
-      flex-direction: column;
     }
   }
 </style>

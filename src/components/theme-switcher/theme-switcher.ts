@@ -11,29 +11,29 @@ import {
 
 const themes = [
   {
+    name: 'ocean',
+    icon: blueThemeIcon,
+    label: 'Altes Design',
+  },
+  {
     name: 'default',
     icon: classicThemeIcon,
-    label: 'Classic',
+    label: 'Akademisch',
   },
   {
     name: 'dark',
     icon: darkThemeIcon,
-    label: 'Dark',
+    label: 'Mentale Klarheit',
   },
   {
     name: 'earth',
     icon: earthThemeIcon,
-    label: 'Earth',
-  },
-  {
-    name: 'ocean',
-    icon: blueThemeIcon,
-    label: 'Ocean',
+    label: 'Vitalität',
   },
   {
     name: 'sand',
     icon: orangeThemeIcon,
-    label: 'Sand',
+    label: 'Empathie',
   }
 ]
 
@@ -64,18 +64,34 @@ export class ThemeSwitcher extends LitElement {
 			}
 			.theme-switcher__container {
 				margin: 2rem 0;
-				display: grid;
-				grid-template-columns: repeat(5, 1fr);
+				display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
 			}
 			.theme-select__container {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+        flex: 1;
+        text-align: center;
 			}
 			.theme-select__container p {
 				font-size: var(--font-size-sm);
+        margin: 0.5rem 0 0 0;
+        line-height: 1;
+        white-space: nowrap;
 			}
+      @media (max-width: 600px) {
+        .theme-switcher__container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+        }
+        .theme-select__container p {
+          white-space: normal;
+        }
+      }
 		`,
 	];
 
@@ -109,21 +125,23 @@ export class ThemeSwitcher extends LitElement {
 		this._doc.setAttribute('data-theme', theme);
 
     const _heroImage = document.querySelector('#home-hero-image') as HTMLImageElement;
-		if (theme === 'default') {
-			_heroImage.src = '/assets/images/home/classic-hero.jpg';
-		}
-		if (theme === 'dark') {
-			_heroImage.src = '/assets/images/home/dark-hero.jpg';
-		}
-		if (theme === 'earth') {
-			_heroImage.src = '/assets/images/home/earth-hero.jpg';
-		}
-		if (theme === 'ocean') {
-			_heroImage.src = '/assets/images/home/ocean-hero.jpg';
-		}
-		if (theme === 'sand') {
-			_heroImage.src = '/assets/images/home/sand-hero.jpg';
-		}
+    if(_heroImage) {
+      if (theme === 'default') {
+        _heroImage.src = '/gerhardscoaching/assets/images/home/classic-hero.jpg';
+      }
+      if (theme === 'dark') {
+        _heroImage.src = '/gerhardscoaching/assets/images/home/dark-hero.jpg';
+      }
+      if (theme === 'earth') {
+        _heroImage.src = '/gerhardscoaching/assets/images/home/earth-hero.jpg';
+      }
+      if (theme === 'ocean') {
+        _heroImage.src = '/gerhardscoaching/assets/images/home/ocean-hero.jpg';
+      }
+      if (theme === 'sand') {
+        _heroImage.src = '/gerhardscoaching/assets/images/home/sand-hero.jpg';
+      }
+    }
 		localStorage.setItem('theme', theme);
 		this.theme = theme;
 	}

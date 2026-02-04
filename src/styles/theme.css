@@ -1,20 +1,25 @@
 :root {
 	/* Theme Colors */
-	--theme-primary: hsl(0, 0%, 0%);
-	--theme-primary-hover: hsl(0, 0%, 20%);
+	--theme-primary: #1A365D;
+	--theme-primary-hover: #2A4365;
 	--theme-on-primary: #fff;
 
 	--theme-bg: #fff;
+  --theme-bg-rgb: 255, 255, 255;
 	--theme-on-bg: #000;
+  --theme-on-bg-rgb: 0, 0, 0;
 
 	--theme-surface-1: #f2f2f2;
 	--theme-on-surface-1: #000;
 
-	--theme-surface-2: #cce6d0;
-	--theme-on-surface-2: #000;
+	--theme-surface-2: #718096;
+	--theme-on-surface-2: #fff;
+
+  /* Pill Colors */
+  --pill-body-reading-bg: var(--theme-primary);
+  --pill-atemformen-bg: var(--theme-surface-2);
 
 	/* Theme Shapes */
-	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */
 	--theme-shape-radius: clamp(1rem, 2rem, 3rem);
 	--theme-button-border-radius: 3rem;
 
@@ -33,115 +38,93 @@
 	/* Theme Fonts */
 	--theme-font-family-serif: 'Roboto Serif', Georgia, Cambria, 'Times New Roman',
 		Times, serif;
-	--theme-font-family-sans: 'Lato', -apple-system, BlinkMacSystemFont,
+	--theme-font-family-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont,
 		sans-serif;
+}
+
+[data-theme='ocean'] {
+	color-scheme: light;
+	--theme-primary: #00AEEF; /* Cyan */
+	--theme-primary-hover: #008fbc;
+	--theme-on-primary: #ffffff;
+	--theme-bg: #fafafa;
+  --theme-bg-rgb: 250, 250, 250;
+	--theme-on-bg: #0c0d0d;
+  --theme-on-bg-rgb: 12, 13, 13;
+	--theme-surface-1: #eef1f3;
+	--theme-on-surface-1: #0c0d0d;
+	--theme-surface-2: #E2007A; /* Magenta */
+	--theme-on-surface-2: #ffffff;
+  --pill-body-reading-bg: #00AEEF;
+  --pill-atemformen-bg: #E2007A;
 }
 
 [data-theme='default'] {
 	color-scheme: light;
-	/* Theme Colors */
-	--theme-primary: hsl(0, 0%, 0%);
-	--theme-primary-hover: hsl(0, 0%, 20%);
+  /* Akademisch Theme */
+	--theme-primary: #1A365D;
+	--theme-primary-hover: #2A4365;
 	--theme-on-primary: #fff;
-
 	--theme-bg: #fff;
-	--theme-on-bg: #000;
-
-	--theme-surface-1: #f2f2f2;
-	--theme-on-surface-1: #000;
-
-	--theme-surface-2: #cce6d0;
-	--theme-on-surface-2: #000;
-
-	/* Theme Shape */
-	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */
-	--theme-shape-radius: clamp(1rem, 2rem, 3rem);
-	--theme-button-border-radius: 3rem;
-
-	/* Theme Transition */
-	--theme-transition: 0.2s ease-in-out;
-
-	/* Theme Layout */
-	--section-margin: 3rem;
-	--theme-grid-gap: 1rem;
-	--container-max-width: 1440px;
-	--container-max-width-narrow: 960px;
-	--container-padding: 0 1rem;
-
-	--theme-blog-post-header-width: 1200px;
+  --theme-bg-rgb: 255, 255, 255;
+	--theme-on-bg: #1A202C;
+  --theme-on-bg-rgb: 26, 32, 44;
+	--theme-surface-1: #EDF2F7;
+	--theme-on-surface-1: #1A202C;
+	--theme-surface-2: #718096;
+	--theme-on-surface-2: #fff;
+  --pill-body-reading-bg: #1A365D;
+  --pill-atemformen-bg: #718096;
 }
 
 [data-theme='dark'] {
 	color-scheme: dark;
-	/* Theme Colors */
-	--theme-primary: hsl(0, 0%, 100%);
-	--theme-primary-hover: hsl(0, 0%, 90%);
-	--theme-on-primary: hsl(0, 0%, 0%);
-
-	--theme-bg: hsl(0, 0%, 2%);
-	--theme-on-bg: hsl(0, 0%, 100%);
-
-	--theme-surface-1: hsl(0, 0%, 20%);
-	--theme-on-surface-1: hsl(0, 0%, 100%);
-
-	--theme-surface-2: #203422;
-	--theme-on-surface-2: #ffffff;
-
-	--theme-shape-radius: 0;
-
-	--form-field-input-color: var(--theme-on-bg);
+  /* Mentale Klarheit Theme */
+	--theme-primary: #818CF8;
+	--theme-primary-hover: #A5B4FC;
+	--theme-on-primary: #000;
+	--theme-bg: #0F172A;
+  --theme-bg-rgb: 15, 23, 42;
+	--theme-on-bg: #F8FAFC;
+  --theme-on-bg-rgb: 248, 250, 252;
+	--theme-surface-1: #1E293B;
+	--theme-on-surface-1: #F8FAFC;
+	--theme-surface-2: #334155;
+	--theme-on-surface-2: #fff;
+  --pill-body-reading-bg: #818CF8;
+  --pill-atemformen-bg: #4B5563;
 }
 
 [data-theme='earth'] {
-	/* Theme Colors */
-	--theme-primary: #2c3e2d;
-	--theme-primary-hover: #395a3b;
-	--theme-on-primary: hsl(0, 0%, 100%);
-
-	--theme-bg: #eeeff1;
-	--theme-on-bg: #272f27;
-
-	--theme-surface-1: #e6e4e0;
-	--theme-on-surface-1: #272f27;
-
-	--theme-surface-2: #c3d9c4;
-	--theme-on-surface-2: #000;
-
-	--theme-button-border-radius: 0.5rem;
-}
-
-[data-theme='ocean'] {
-	/* Theme Colors */
-	/* Theme Colors */
-	--theme-primary: #1556ac;
-	--theme-primary-hover: #2569c3;
-	--theme-on-primary: hsl(0, 0%, 100%);
-
-	--theme-bg: #fafafa;
-	--theme-on-bg: #0c0d0d;
-
-	--theme-surface-1: #eef1f3;
-	--theme-on-surface-1: #0c0d0d;
-
-	--theme-surface-2: #072650;
-	--theme-on-surface-2: #ffffff;
+  /* Vitalität Theme */
+	--theme-primary: #2F855A;
+	--theme-primary-hover: #276749;
+	--theme-on-primary: #fff;
+	--theme-bg: #F0FFF4;
+  --theme-bg-rgb: 240, 255, 244;
+	--theme-on-bg: #22543D;
+  --theme-on-bg-rgb: 34, 84, 61;
+	--theme-surface-1: #C6F6D5;
+	--theme-on-surface-1: #22543D;
+	--theme-surface-2: #ED8936;
+	--theme-on-surface-2: #fff;
+  --pill-body-reading-bg: #2F855A;
+  --pill-atemformen-bg: #ED8936;
 }
 
 [data-theme='sand'] {
-	/* Theme Colors */
-	/* Theme Colors */
-	--theme-primary: #e38a20;
-	--theme-primary-hover: #eb870f;
-	--theme-on-primary: hsl(0, 0%, 100%);
-
-	--theme-bg: #fffffe;
-	--theme-on-bg: #5e4536;
-
-	--theme-surface-1: #ffecd9;
-	--theme-on-surface-1: #5e4536;
-
-	--theme-surface-2: #6a4d34;
-	--theme-on-surface-2: #ffffff;
-
-	--theme-button-border-radius: 0.5rem;
+  /* Empathie Theme */
+	--theme-primary: #9C4221;
+	--theme-primary-hover: #7B341E;
+	--theme-on-primary: #fff;
+	--theme-bg: #FFFAF0;
+  --theme-bg-rgb: 255, 250, 240;
+	--theme-on-bg: #5E270E;
+  --theme-on-bg-rgb: 94, 39, 14;
+	--theme-surface-1: #FEEBC8;
+	--theme-on-surface-1: #5E270E;
+	--theme-surface-2: #F6AD55;
+	--theme-on-surface-2: #fff;
+  --pill-body-reading-bg: #9C4221;
+  --pill-atemformen-bg: #F6AD55;
 }

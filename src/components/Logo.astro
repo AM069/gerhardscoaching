@@ -1,18 +1,18 @@
 ---
+import { Image } from 'astro:assets';
+import logoImage from '../assets/images/gerhardscoaching-logo.png';
 ---
 
-<p class="odyssey-logo">Odyssey</p>
+<Image src={logoImage} alt="Gerhards Coaching Logo" width={240} height={128} class="odyssey-logo" />
 
 <style>
 	.odyssey-logo {
-		width: fit-content;
+		width: auto;
+    height: 60px; /* Increased from 40px */
 		margin: 0;
-		font-family: var(--theme-font-family-serif);
-    font-size: var(--font-size-md);
-		color: inherit;
-	}
-	.odyssey-logo:hover {
-		text-decoration: underline;
-		cursor: pointer;
+    /* Force high-quality rendering and hardware acceleration */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
 	}
 </style>

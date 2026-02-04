@@ -17,23 +17,33 @@ const { seo } = Astro.props as Props;
 ---
 
 <Layout seo={seo}>
-	<Header rightMenu navData={nav} slot="header">
+  <style slot="head">
+    .header-action-item__container {
+      display: flex;
+      gap: 0.5rem;
+    }
+  </style>
+	<Header rightMenu navData={nav} slot="header" transition:persist>
 		<span slot="logo">
 			<Logo />
 		</span>
-		<Button slot="action-item" href="/theme/get-started">Get Started</Button>
+    <div slot="action-item" class="header-action-item__container">
+      <Button href="#" style="background-color: var(--pill-body-reading-bg); color: white;">Body Reading</Button>
+      <Button href="#" style="background-color: var(--pill-atemformen-bg); color: white;">Atemformen</Button>
+    </div>
 	</Header>
 	<div id="page">
 		<slot />
 	</div>
 	<Footer
 		slot="footer"
-		background="var(--theme-surface-1)"
-		color="var(--theme-on-surface-1)"
+		background="var(--theme-surface-2)"
+		color="var(--theme-on-surface-2)"
 		footerLists={footerLists}
     footerSocials={footerSocials}
 		copyrightName={settings.name}
     showPlug={settings.showPlug}
+    transition:persist
 	>
 		<Logo slot="logo" />
 	</Footer>

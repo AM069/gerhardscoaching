@@ -3,39 +3,34 @@ import { Icon } from 'astro-icon/components';
 import { Container, Button } from '@components/odyssey-theme';
 import settings from '../../../config/settings.js';
 import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
+import ServiceSlideshow from './ServiceSlideshow.astro';
 ---
 
 <Container>
 	<section class="hero-section__section">
 		<div class="hero-section__text">
-				<h1>Welcome to Odyssey</h1>
+				<h1>Willkommen bei Gerhards Coaching</h1>
 				<p>
-					A marketing website theme built with <a
-						href="https://astro.build"
-						target="_blank"
-						rel="noreferrer">Astro</a
-					> and carefully crafted for startups and businesses.
+					Persönliche Entwicklung durch individuelle Betreuung
 				</p>
 				<div class="hero-btns__container">
-					<Button href="/theme/get-started" customIcon
-						>Get Started
+					<Button href="#" customIcon
+						>Jetzt anfragen
             <Fragment slot="icon">
               <Icon name="ic:baseline-chevron-right"/>
             </Fragment>
             </Button
 					>
-					<Button href="/theme/style-guide" unelevated>Style Guide</Button>
 				</div>
-        {settings.enableThemeSwitcher && <ThemeSwitcher client:only/>}
+        {settings.enableThemeSwitcher && (
+          <div class="theme-switcher__wrapper">
+            <p>Wähle dein Design für die Seite</p>
+            <ThemeSwitcher client:only/>
+          </div>
+        )}
 		</div>
 		<div class="hero-section__image">
-				<picture>
-					<img
-						src="/assets/images/home/classic-hero.jpg"
-						alt="Astro Odyssey"
-						id="home-hero-image"
-					/>
-				</picture>
+				<ServiceSlideshow />
 		</div>
 	</section>
 </Container>
@@ -61,6 +56,17 @@ import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 	.hero-btns__container {
 		margin-right: 1rem;
 	}
+  .theme-switcher__wrapper {
+    margin-top: 2rem;
+  }
+  .theme-switcher__wrapper p {
+    margin-bottom: 0;
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    opacity: 0.8;
+  }
 	.hero-section__image {
 		display: flex;
 	}

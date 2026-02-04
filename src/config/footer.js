@@ -1,80 +1,61 @@
 export const footerSocials = [
   {
-    name: 'Twitter',
-    url: 'https://twitter.com/jaydanurwin',
-    icon: "mdi:twitter",
+    name: 'Instagram',
+    url: 'https://instagram.com/gerhardscoaching',
+    icon: "mdi:instagram",
   },
   {
-    name: 'Youtube',
-    url: 'https://youtube.com/@jaydanurwin',
-    icon: "mdi:youtube",
-  },
-  {
-    name: 'Github',
-    url: 'https://github.com/jaydanurwin',
-    icon: "mdi:github",
-  },
-  {
-    name: 'Discord',
-    url: 'https://astro.build/chat',
-    icon: "ic:baseline-discord",
+    name: 'LinkedIn',
+    url: 'https://linkedin.com/company/gerhardscoaching',
+    icon: "mdi:linkedin",
   },
 ]
 
 export const footerLists = [
 	{
-		title: 'Landing Pages',
+		title: 'Leistungen',
 		items: [
 			{
-				title: 'Landing Page 1',
-				slug: '/landing-pages/landing-1',
+				title: 'Persönlichkeitsanalyse',
+				slug: '#',
 			},
 			{
-				title: 'Landing Page 2',
-				slug: '/landing-pages/landing-2',
+				title: 'Persönlichkeitsentwicklung',
+				slug: '#',
 			},
-      // {
-			// 	title: 'Landing Page 3',
-			// 	slug: '/landing-pages/landing-3',
-			// },
+			{
+				title: 'Kommunikationstraining',
+				slug: '#',
+			},
+			{
+				title: 'Mentaltraining',
+				slug: '#',
+			},
+			{
+				title: 'Body Reading',
+				slug: '#',
+			},
+			{
+				title: 'Atemformenanalyse',
+				slug: '#',
+			},
+			{
+				title: 'Ernährungsberatung',
+				slug: '#',
+			},
 		],
 	},
 	{
-		title: 'Company',
+		title: 'Rechtliches',
 		items: [
 			{
-				title: 'About',
-				slug: '/company/about',
+				title: 'Impressum',
+				slug: '/company/legal#impressum',
 			},
 			{
-				title: 'Blog',
-				slug: '/blog',
+				title: 'Datenschutz',
+				slug: '/company/legal#datenschutz',
 			},
-			{
-				title: 'Contact',
-				slug: '/company/contact',
-			},
-		],
-	},
-	{
-		title: 'Theme',
-		items: [
-			{
-				title: 'Get Started',
-				slug: '/theme/get-started',
-			},
-			{
-				title: 'Style Guide',
-				slug: '/theme/style-guide',
-			},
-      {
-        title: 'Theme Setup',
-        slug: '/theme/theme-setup',
-      },
-      {
-        title: 'Customizing Odyssey',
-        slug: '/theme/customizing-odyssey',
-      }
 		],
 	},
 ];
